@@ -34,28 +34,6 @@ I use this repository to save my practice files, exercises, and progress while l
 * Query MySQL Database
 * Registration Form Project
 
-## 📁 Repository Structure
-
-```text
-PHP-Learning-Journey/
-│
-├── variables-and-data-types/
-│   ├── index.php
-│   └── index2.php
-│
-├── arithmetic/
-│
-├── get-and-post/
-│
-├── arrays/
-│
-├── functions/
-│
-├── mysql/
-│
-└── README.md
-```
-
 Each folder contains my practice code for a specific PHP topic.
 
 ## 🎯 Goal

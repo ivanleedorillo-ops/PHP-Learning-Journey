@@ -16,6 +16,26 @@ header {
     color: white;
     text-align: center;
     padding: 30px 20px;
+    position: relative;
+}
+
+.back-button {
+    background-color: white;
+    border-radius: 5px;
+    color: blue;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    left: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    text-decoration: none;
+    top: 20px;
+}
+
+.back-button:hover,
+.back-button:focus {
+    background-color: #eeeeee;
 }
 
 header h1 {
@@ -70,4 +90,10 @@ code {
 
 section p {
     margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding-top: 75px;
+    }
 }

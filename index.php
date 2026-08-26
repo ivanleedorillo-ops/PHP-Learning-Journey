@@ -16,7 +16,7 @@ $completed_lessons = 1;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 
     <title>PHP Learning Journey</title>
 </head>
@@ -165,7 +165,7 @@ $completed_lessons = 1;
 
                 <!-- COMPLETED / CURRENT LESSON -->
 
-                <a href="variables-and-data-types/index.php"
+                <a href="lessons/01-variables-and-data-types/index.php"
                    class="lesson-card completed">
 
                     <div class="lesson-number">

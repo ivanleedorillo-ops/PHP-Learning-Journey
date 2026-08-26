@@ -42,7 +42,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="indexstyle.css">
+    <link rel="stylesheet" href="../../assets/css/lesson.css">
 
     <title>Variables and Data Types</title>
 </head>
@@ -50,6 +50,7 @@
 <body>
 
     <header>
+        <a class="back-button" href="../../index.php">&larr; Back to lessons</a>
         <h1>PHP Variables and Data Types</h1>
         <p class="intro">
             My practice page for understanding basic PHP variables and data types.
@@ -269,7 +270,58 @@
             <p>Product Status: <?php echo $product_status ? "Available" : "Out of Stock"?></p>
             <br>
             <p>Total Purchase Amount: $<?php echo $TOTAL; ?>.</p>
-
+        </section>
+        <section>
+            <h2 class="whatihavelearned">What I Have Learned</h2>
+            <h3>What is variable in PHP?</h3>
+            <p>A named container or "storage locker" in memory used to hold data that your script can read, update, or use later.</p>
+            <h3>What is a String?</h3>
+            <p>A sequence of characters—such as letters, numbers, spaces, or symbols—wrapped in single or double quotes used to represent text.</p>
+            <h3>What is an Integer?</h3>
+            <p>A whole number without any decimal points, which can be either positive, zero, or negative (e.g., -15, 0, 42).</p>
+            <h3>What is a Float?</h3>
+            <p>Float (Floating-point number): A number that contains a decimal point or fractional part (e.g., 3.14, -0.001, 10.0).</p>
+            <h3>What is a Boolean?</h3>
+            <p>Boolean: The simplest data type, representing a logical value that can only be either true or false.</p>
+            <h3>The difference between:</h3>
+            <code class="code-example">"21"</code>
+            <code class="code-example">21</code>
+            <br>
+            <br>
+            <p>"21" (String): PHP treats this as textual characters, wrapped in quotation marks. Even though it looks like a number, it behaves like words or letters.</p>
+            <p>21 (Integer): PHP treats this as a whole number. It has no quotes and is stored in memory as a numerical value ready for mathematical calculations.</p>
+            <br>
+            <h3>What Happens When a Boolean is true or false?</h3>
+            <p><strong>In Control Flow (if statements):</strong></p> 
+            <ul>
+                <li>If a condition evaluates to <strong>true</strong>, PHP executes the code inside that if block.</li>
+                <li>If a condition evaluates to <strong>false</strong>, PHP skips that block entirely and moves to the next instruction (or runs an else block if provided).</li>
+            </ul>
+            <br>
+            <p><strong>When Outputting (echo / print):</strong></p>
+            <ul>
+                <li>Printing true converts the value to the string "1".</li>
+                <li>Printing false converts the value to an empty string "" (it prints nothing to the screen).</li>
+            </ul>
+            <div class="code-example">
+                <code>
+                    $is_admin = true;<br>
+                    <br>
+                    if ($is_admin) {
+                        echo "Welcome to the admin dashboard!"; // This runs because $is_admin is true.
+                    }<br>
+                </code>
+            </div>
+            <h3>Why $student_name is Better Than $x</h3>
+            <ul>
+                <li>Self-Documentation: A clear name instantly reveals what data the variable holds without needing extra comments.</li>
+                <li>Maintainability: When you or another developer return to the codebase months later, $student_name is immediately readable, whereas $x forces you to trace back through the code to figure out what it represents.</li>
+                <li>Prevents Bugs: Using vague names like $x, $y, and $z increases the risk of accidentally assigning or overwriting the wrong data.</li>
+            </ul>
+        </section>
+        <section class="final_sections">
+            <h1>THANKKK YOUUU</h1>
+        </section>
     </main>
 
 </body>

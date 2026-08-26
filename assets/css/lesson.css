@@ -69,6 +69,24 @@ h3 {
     margin-bottom: 10px;
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 3px solid gray;
+    padding: 10px;
+    text-align: center;
+}
+
+.final_sections h1 {
+    display: flex;
+    justify-content: center;
+}
+
+
 .note {
     background-color: #eeeeee;
     padding: 12px;

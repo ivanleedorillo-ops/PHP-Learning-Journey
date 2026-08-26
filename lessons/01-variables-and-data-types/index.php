@@ -290,14 +290,12 @@
             <br>
             <p>"21" (String): PHP treats this as textual characters, wrapped in quotation marks. Even though it looks like a number, it behaves like words or letters.</p>
             <p>21 (Integer): PHP treats this as a whole number. It has no quotes and is stored in memory as a numerical value ready for mathematical calculations.</p>
-            <br>
             <h3>What Happens When a Boolean is true or false?</h3>
             <p><strong>In Control Flow (if statements):</strong></p> 
             <ul>
                 <li>If a condition evaluates to <strong>true</strong>, PHP executes the code inside that if block.</li>
                 <li>If a condition evaluates to <strong>false</strong>, PHP skips that block entirely and moves to the next instruction (or runs an else block if provided).</li>
             </ul>
-            <br>
             <p><strong>When Outputting (echo / print):</strong></p>
             <ul>
                 <li>Printing true converts the value to the string "1".</li>
@@ -318,6 +316,38 @@
                 <li>Maintainability: When you or another developer return to the codebase months later, $student_name is immediately readable, whereas $x forces you to trace back through the code to figure out what it represents.</li>
                 <li>Prevents Bugs: Using vague names like $x, $y, and $z increases the risk of accidentally assigning or overwriting the wrong data.</li>
             </ul>
+            <h3>Real-life example for each data type.</h3>
+            <table border="1">
+            <thead>
+                <tr>
+                <th>Data Type</th>
+                <th>Real-Life Example</th>
+                <th>PHP Code</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>String (Text)</td>
+                <td>Storing a user's full name or email address</td>
+                <td>$user_email = "ivan.lee@example.com";</td>
+                </tr>
+                <tr>
+                <td>Integer (Whole number)</td>
+                <td>Counting items in a shopping cart or student enrollment</td>
+                <td>$items_in_cart = 3;</td>
+                </tr>
+                <tr>
+                <td>Float / Double (Decimal number)</td>
+                <td>Tracking product prices or grade point averages (GPA)</td>
+                <td>$product_price = 49.99;</td>
+                </tr>
+                <tr>
+                <td>Boolean (True/False)</td>
+                <td>Checking if an order has been paid or if an account is active</td>
+                <td>$is_paid = false;</td>
+                </tr>
+            </tbody>
+            </table>           
         </section>
         <section class="final_sections">
             <h1>THANKKK YOUUU</h1>

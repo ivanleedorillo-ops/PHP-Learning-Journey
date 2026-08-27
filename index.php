@@ -167,7 +167,6 @@ $completed_lessons = 1;
 
                 <a href="lessons/01-variables-and-data-types/index.php"
                    class="lesson-card completed">
-
                     <div class="lesson-number">
                         01
                     </div>
@@ -179,33 +178,27 @@ $completed_lessons = 1;
                             and displaying PHP values inside HTML.
                         </p>
                     </div>
-
                     <span class="status">
                         Completed
                     </span>
-
                 </a>
 
 
                 <!-- UPCOMING -->
-
-                <div class="lesson-card">
-
-                    <div class="lesson-number">02</div>
-
+                <a href="lessons\02-arithmetic\index.php" class="lesson-card completed">
+                    <div class="lesson-number">
+                        02
+                    </div>
                     <div class="lesson-info">
                         <h3>Arithmetic</h3>
                         <p>
-                            Perform calculations using PHP variables and
-                            arithmetic operators.
+                            Perform calculations using PHP variables and arithmetic operators.
                         </p>
                     </div>
-
                     <span class="status upcoming">
-                        Upcoming
+                        Working
                     </span>
-
-                </div>
+                </a>
 
 
                 <div class="lesson-card">

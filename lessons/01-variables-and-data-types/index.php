@@ -33,6 +33,16 @@
     $Price = 25.50;
     $product_status = true;
     $TOTAL = $Quantity * $Price;
+
+//Final Challenge — Student Profile Card
+    $student_name = "Ivan Lee Dorillo";
+    $course = "BSIT";
+    $school = "BTECH";
+    $favorite_language = "PHP";
+    $year_level = 3;
+    $is_student = True;
+    $is_available_for_internship = True;
+
 ?>
 
 <!DOCTYPE html>
@@ -254,7 +264,7 @@
                     $Quantity =  3;<br>
                     $Price = 25.50;<br>
                     $product_status = true;<br>
-                    $TOTAL = null;
+                    $TOTAL = $Quantity * $Price;
                 </code>
             </div>
             <h3>Output</h3>
@@ -265,7 +275,7 @@
             <p>Student Status: <?php echo $student_status ? "Active" : "Inactive"?></p> 
             <br>
             <p>Purchase Information</p>
-            <p>I want to buy <?php echo $Quantity; ?> Keyboards.</p>
+            <p>I want to buy <?php echo $Quantity; ?> Keyboard.</p>
             <p>The price of each Keyboard is $<?php echo $Price; ?>.</p>
             <p>Product Status: <?php echo $product_status ? "Available" : "Out of Stock"?></p>
             <br>
@@ -273,6 +283,8 @@
         </section>
         <section>
             <h2 class="whatihavelearned">What I Have Learned</h2>
+            <h3>Why do PHP variables start with $?</h3>
+            <p>PHP variables start with a dollar sign (`$`) because the language was directly influenced by Perl and Unix shell scripting, where `$` acts as a sigil—a special prefix character that tells the PHP parser, "what follows is a variable name."</p>
             <h3>What is variable in PHP?</h3>
             <p>A named container or "storage locker" in memory used to hold data that your script can read, update, or use later.</p>
             <h3>What is a String?</h3>
@@ -348,6 +360,34 @@
                 </tr>
             </tbody>
             </table>           
+        </section>
+        <section>
+            <h2>Final Challenge — Student Profile Card</h2>
+            <div class="code-example">
+                <code>
+                    $student_name = "Ivan Lee Dorillo"; <br>
+                    $course = "BSIT";<br>
+                    $age = 21;<br>
+                    $school = "BSIT";<br>
+                    $favorite_language = "PHP";<br>
+                    $GPA = 1.80;<br>
+                    $year_level = 3;<br>
+                    $is_student = True;<br>
+                    $is_available_for_internship = True;<br>
+                </code>
+            </div>
+            <h3>OUTPUT</h3>
+            <p>Student Profile</p>
+            <p><?php echo $student_name; ?></p>
+            <p><?php echo $course; ?> - <?php echo $year_level; ?></p>
+            <br>
+            <p>School: <?php echo $school; ?></p>
+            <p>Age: <?php echo $age; ?></p>
+            <p>Favorite Language: <?php echo $favorite_language; ?></p>
+            <p>GPA: <?php echo $gpa; ?></p>
+            <br>
+            <p>Student Status: <?php echo $is_student ? "Active" : "Inactive"; ?></p> 
+            <p>Available for Internship: <?php echo $is_available_for_internship ? "Yes" : "No"; ?></p>
         </section>
         <section class="final_sections">
             <h1>THANKKK YOUUU</h1>

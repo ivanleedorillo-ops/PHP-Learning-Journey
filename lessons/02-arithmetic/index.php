@@ -16,5 +16,6 @@
             My practice page for understanding basic PHP variables and data types.
         </p>
     </header>
+    
     </body>
 </head>

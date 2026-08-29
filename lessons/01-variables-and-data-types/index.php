@@ -368,9 +368,9 @@
                     $student_name = "Ivan Lee Dorillo"; <br>
                     $course = "BSIT";<br>
                     $age = 21;<br>
-                    $school = "BSIT";<br>
+                    $school = "BTECH";<br>
                     $favorite_language = "PHP";<br>
-                    $GPA = 1.80;<br>
+                    $gpa = 1.80;<br>
                     $year_level = 3;<br>
                     $is_student = True;<br>
                     $is_available_for_internship = True;<br>

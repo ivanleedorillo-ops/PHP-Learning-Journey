@@ -3,46 +3,42 @@
 // PHP VARIABLES AND DATA TYPES
 // ========================================
 
-// Strings - used for text
-    $name = "Ivan Lee Dorillo";
-    $food = "Adobo";
-    $email = "ivanleedorillo@gmail.com";
+// Strings - used for text.
+$name = "Ivan Lee Dorillo";
+$food = "Adobo";
+$email = "ivanleedorillo@gmail.com";
 
-// Integers - whole numbers without decimals
-    $age = 21;
-    $users = 5;
-    $quantity = 3;
+// Integers - whole numbers without decimals.
+$age = 21;
+$users = 5;
+$quantity = 3;
 
-// Floats - numbers with decimal values
-    $gpa = 1.80;
-    $price = 4.99;
-    $tax_rate = 1.5;
+// Floats - numbers with decimal values.
+$gpa = 1.80;
+$price = 4.99;
+$tax_rate = 1.5;
 
-// Booleans - can only be true or false
-    $employed = true;
-    $online = false;
-    $for_sale = true;
+// Booleans - true or false values.
+$employed = true;
+$online = false;
+$for_sale = true;
 
-//Practice Task: Student Purchase Profile
-    $studentname = "Ivan Lee Dorillo";
-    $Age = 21;
-    $Favorite = "PHP, html, and css";
-    $GPA = 1.80;
-    $student_status = true;
-    $Quantity =  3;
-    $Price = 25.50;
-    $product_status = true;
-    $TOTAL = $Quantity * $Price;
+// Practice task: Student Purchase Profile.
+$student_name = "Ivan Lee Dorillo";
+$favorite_technologies = "PHP, HTML, and CSS";
+$student_status = true;
+$order_quantity = 3;
+$order_price = 25.50;
+$product_status = true;
+$order_total = $order_quantity * $order_price;
 
-//Final Challenge — Student Profile Card
-    $student_name = "Ivan Lee Dorillo";
-    $course = "BSIT";
-    $school = "BTECH";
-    $favorite_language = "PHP";
-    $year_level = 3;
-    $is_student = True;
-    $is_available_for_internship = True;
-
+// Final challenge: Student Profile Card.
+$course = "BSIT";
+$school = "BTECH";
+$favorite_language = "PHP";
+$year_level = 3;
+$is_student = true;
+$is_available_for_internship = true;
 ?>
 
 <!DOCTYPE html>
@@ -51,349 +47,295 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="../../assets/css/lesson.css">
-
-    <title>Variables and Data Types</title>
+    <meta name="description" content="PHP variables and data types lesson with examples, notes, and practice tasks.">
+    <link rel="stylesheet" href="../../assets/css/lessons/variables-and-data-types.css">
+    <title>Variables and Data Types | PHP Learning Journey</title>
 </head>
 
 <body>
-
-    <header>
-        <a class="back-button" href="../../index.php">&larr; Back to lessons</a>
-        <h1>PHP Variables and Data Types</h1>
-        <p class="intro">
-            My practice page for understanding basic PHP variables and data types.
-        </p>
+    <!-- Copy this header structure for the next lesson. -->
+    <header class="lesson-header">
+        <div class="header-content">
+            <a class="back-button" href="../../index.php">&larr; Back to lessons</a>
+            <p class="label">LESSON 01 · PHP FUNDAMENTALS</p>
+            <h1>Variables and Data Types</h1>
+            <p class="description">
+                Learn how PHP stores information using variables, strings, integers, floats, and booleans.
+            </p>
+        </div>
     </header>
 
     <main>
+        <section class="lesson-summary">
+            <div>
+                <span>Level</span>
+                <strong>Beginner</strong>
+            </div>
+            <div>
+                <span>Topics</span>
+                <strong>4 data types</strong>
+            </div>
+            <div>
+                <span>Status</span>
+                <strong class="completed-text">Completed</strong>
+            </div>
+        </section>
 
-        <!-- STRINGS -->
-        <section>
+        <nav class="topic-navigation" aria-label="Lesson topics">
+            <a href="#strings">Strings</a>
+            <a href="#integers">Integers</a>
+            <a href="#floats">Floats</a>
+            <a href="#booleans">Booleans</a>
+            <a href="#practice">Practice</a>
+            <a href="#notes">Notes</a>
+            <a href="#challenge">Challenge</a>
+        </nav>
 
-            <h2>Strings</h2>
+        <!-- Copy this lesson-section pattern for each topic. -->
+        <section class="lesson-section" id="strings">
+            <div class="section-heading">
+                <div>
+                    <p class="label">DATA TYPE 01</p>
+                    <h2>Strings</h2>
+                </div>
+                <span class="type-badge">Text</span>
+            </div>
 
             <p class="note">
-                <strong>Meaning:</strong>
-                A String is used to store text or a group of characters.
-                String values are usually placed inside quotation marks.
+                <strong>Meaning:</strong> A string stores text or a group of characters. Its value is placed inside single or double quotation marks.
             </p>
 
-            <div class="code-example">
-                <code>
-                    $name = "Ivan Lee Dorillo";<br>
-                    $food = "Adobo";<br>
-                    $email = "ivanleedorillo@gmail.com";
-                </code>
+            <div class="example-grid">
+                <div class="code-example">
+                    <span class="block-label">PHP code</span>
+                    <pre><code>$name = "Ivan Lee Dorillo";
+$food = "Adobo";
+$email = "ivanleedorillo@gmail.com";</code></pre>
+                </div>
+                <div class="output-example">
+                    <span class="block-label">Output</span>
+                    <p>Good day! My name is <strong><?php echo $name; ?></strong>.</p>
+                    <p>My favorite food is <strong><?php echo $food; ?></strong>.</p>
+                    <p>My email is <strong><?php echo $email; ?></strong>.</p>
+                </div>
             </div>
-
-            <h3>Output</h3>
-
-            <p>
-                Good day everyone, my name is
-                <strong>
-                    <?php echo $name; ?>
-                </strong>.
-            </p>
-
-            <p>
-                My favorite food is
-                <strong>
-                    <?php echo $food; ?>
-                </strong>.
-            </p>
-
-            <p>
-                My email is
-                <strong>
-                    <?php echo $email; ?>
-                </strong>.
-            </p>
-
         </section>
 
-
-        <!-- INTEGERS -->
-        <section>
-
-            <h2>Integers</h2>
+        <section class="lesson-section" id="integers">
+            <div class="section-heading">
+                <div>
+                    <p class="label">DATA TYPE 02</p>
+                    <h2>Integers</h2>
+                </div>
+                <span class="type-badge">Whole numbers</span>
+            </div>
 
             <p class="note">
-                <strong>Meaning:</strong>
-                An Integer is a whole number without a decimal point.
-                It can be positive, negative, or zero.
+                <strong>Meaning:</strong> An integer is a positive, negative, or zero whole number without a decimal point.
             </p>
 
-            <div class="code-example">
-                <code>
-                    $age = 21;<br>
-                    $users = 5;<br>
-                    $quantity = 3;
-                </code>
+            <div class="example-grid">
+                <div class="code-example">
+                    <span class="block-label">PHP code</span>
+                    <pre><code>$age = 21;
+$users = 5;
+$quantity = 3;</code></pre>
+                </div>
+                <div class="output-example">
+                    <span class="block-label">Output</span>
+                    <p>I am <strong><?php echo $age; ?></strong> years old.</p>
+                    <p>There are <strong><?php echo $users; ?></strong> users online.</p>
+                    <p>I would like to buy <strong><?php echo $quantity; ?></strong> items.</p>
+                </div>
             </div>
-
-            <h3>Output</h3>
-
-            <p>
-                I am
-                <strong>
-                    <?php echo $age; ?>
-                </strong>
-                years old.
-            </p>
-
-            <p>
-                There are
-                <strong>
-                    <?php echo $users; ?>
-                </strong>
-                users online.
-            </p>
-
-            <p>
-                I would like to buy
-                <strong>
-                    <?php echo $quantity; ?>
-                </strong>
-                items.
-            </p>
-
         </section>
 
-
-        <!-- FLOATS -->
-        <section>
-
-            <h2>Floats</h2>
+        <section class="lesson-section" id="floats">
+            <div class="section-heading">
+                <div>
+                    <p class="label">DATA TYPE 03</p>
+                    <h2>Floats</h2>
+                </div>
+                <span class="type-badge">Decimal numbers</span>
+            </div>
 
             <p class="note">
-                <strong>Meaning:</strong>
-                A Float is a number that contains a decimal point.
-                It is commonly used for prices, grades, percentages, and measurements.
+                <strong>Meaning:</strong> A float contains a decimal point. Floats are often used for prices, grades, percentages, and measurements.
             </p>
 
-            <div class="code-example">
-                <code>
-                    $gpa = 1.80;<br>
-                    $price = 4.99;<br>
-                    $tax_rate = 1.5;
-                </code>
+            <div class="example-grid">
+                <div class="code-example">
+                    <span class="block-label">PHP code</span>
+                    <pre><code>$gpa = 1.80;
+$price = 4.99;
+$tax_rate = 1.5;</code></pre>
+                </div>
+                <div class="output-example">
+                    <span class="block-label">Output</span>
+                    <p>My GPA is <strong><?php echo number_format($gpa, 2); ?></strong>.</p>
+                    <p>The price of Adobo is <strong>$<?php echo number_format($price, 2); ?></strong>.</p>
+                    <p>The tax rate is <strong><?php echo $tax_rate; ?>%</strong>.</p>
+                </div>
             </div>
-
-            <h3>Output</h3>
-
-            <p>
-                My GPA is
-                <strong>
-                    <?php echo $gpa; ?>
-                </strong>.
-            </p>
-
-            <p>
-                The price of Adobo is
-                <strong>$
-                    <?php echo $price; ?>
-                </strong>.
-            </p>
-
-            <p>
-                The sales tax rate is
-                <strong>
-                    <?php echo $tax_rate; ?>%
-                </strong>.
-            </p>
-
         </section>
 
-
-        <!-- BOOLEANS -->
-        <section>
-
-            <h2>Booleans</h2>
+        <section class="lesson-section" id="booleans">
+            <div class="section-heading">
+                <div>
+                    <p class="label">DATA TYPE 04</p>
+                    <h2>Booleans</h2>
+                </div>
+                <span class="type-badge">True or false</span>
+            </div>
 
             <p class="note">
-                <strong>Meaning:</strong>
-                A Boolean has only two possible values:
-                <strong>true</strong> or <strong>false</strong>.
-                It is useful for checking conditions or status.
+                <strong>Meaning:</strong> A boolean has only two possible values: <strong>true</strong> or <strong>false</strong>. It is useful for checking a condition or status.
             </p>
 
-            <div class="code-example">
-                <code>
-                    $employed = true;<br>
-                    $online = false;<br>
-                    $for_sale = true;
-                </code>
+            <div class="example-grid">
+                <div class="code-example">
+                    <span class="block-label">PHP code</span>
+                    <pre><code>$employed = true;
+$online = false;
+$for_sale = true;</code></pre>
+                </div>
+                <div class="output-example">
+                    <span class="block-label">Output</span>
+                    <p>Online: <strong><?php echo $online ? "Online" : "Offline"; ?></strong></p>
+                    <p>Employment: <strong><?php echo $employed ? "Employed" : "Unemployed"; ?></strong></p>
+                    <p>Sale status: <strong><?php echo $for_sale ? "For sale" : "Not for sale"; ?></strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use challenge-section for practice activities. -->
+        <section class="lesson-section challenge-section" id="practice">
+            <p class="label">PRACTICE TASK</p>
+            <h2>Student Purchase Profile</h2>
+            <p>Combine all four data types, then use two variables to calculate a purchase total.</p>
+
+            <div class="example-grid">
+                <div class="code-example">
+                    <span class="block-label">PHP code</span>
+                    <pre><code>$student_name = "Ivan Lee Dorillo";
+$favorite_technologies = "PHP, HTML, and CSS";
+$student_status = true;
+$order_quantity = 3;
+$order_price = 25.50;
+$product_status = true;
+$order_total = $order_quantity * $order_price;</code></pre>
+                </div>
+                <div class="output-example profile-output">
+                    <span class="block-label">Output</span>
+                    <h3><?php echo $student_name; ?></h3>
+                    <p><?php echo $favorite_technologies; ?></p>
+                    <p>Status: <strong><?php echo $student_status ? "Active" : "Inactive"; ?></strong></p>
+                    <hr>
+                    <p><?php echo $order_quantity; ?> keyboards at $<?php echo number_format($order_price, 2); ?> each</p>
+                    <p>Product: <strong><?php echo $product_status ? "Available" : "Out of stock"; ?></strong></p>
+                    <p class="total">Total: $<?php echo number_format($order_total, 2); ?></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section" id="notes">
+            <p class="label">LESSON NOTES</p>
+            <h2>What I Have Learned</h2>
+
+            <div class="notes-grid">
+                <article>
+                    <h3>Why do variables begin with $?</h3>
+                    <p>The dollar sign is a special marker that tells the PHP parser that the name following it is a variable.</p>
+                </article>
+                <article>
+                    <h3>Why use descriptive names?</h3>
+                    <p>A name such as <code>$student_name</code> explains its purpose more clearly than a vague name such as <code>$x</code>.</p>
+                </article>
+                <article>
+                    <h3>What happens with booleans?</h3>
+                    <p>A true condition runs its code block, while a false condition skips it. Echoing true displays 1; echoing false displays nothing.</p>
+                </article>
+                <article>
+                    <h3>String versus integer</h3>
+                    <p><code>"21"</code> is text because it uses quotation marks. <code>21</code> is a number that can be used directly in calculations.</p>
+                </article>
             </div>
 
-            <h3>Output</h3>
-
-            <p>
-                Online Status:
-                <strong>
-                    <?php echo $online ? "Online" : "Offline"; ?>
-                </strong>
-            </p>
-
-            <p>
-                Employment Status:
-                <strong>
-                    <?php echo $employed ? "Employed" : "Unemployed"; ?>
-                </strong>
-            </p>
-
-            <p>
-                For Sale Status:
-                <strong>
-                    <?php echo $for_sale ? "For Sale" : "Not For Sale"; ?>
-                </strong>
-            </p>
-
-        </section>
-        <section>
-            <h2>Practice Task: Student Purchase Profile</h2>
-
-            <div class="code-example">
-                <code>
-                    $studentname = "Ivan Lee Dorillo";<br>
-                    $Age = 21;<br>
-                    $Favorite = "PHP, html, and css";<br>
-                    $GPA = 1.80;<br>
-                    $student_status = true;<br>
-                    $Quantity =  3;<br>
-                    $Price = 25.50;<br>
-                    $product_status = true;<br>
-                    $TOTAL = $Quantity * $Price;
-                </code>
+            <h3 class="table-heading">Real-life examples</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Data type</th>
+                            <th scope="col">Real-life example</th>
+                            <th scope="col">PHP code</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>String</td>
+                            <td>Store a user's email address</td>
+                            <td><code>$email = "ivan@example.com";</code></td>
+                        </tr>
+                        <tr>
+                            <td>Integer</td>
+                            <td>Count shopping-cart items</td>
+                            <td><code>$items = 3;</code></td>
+                        </tr>
+                        <tr>
+                            <td>Float</td>
+                            <td>Store a product price</td>
+                            <td><code>$price = 49.99;</code></td>
+                        </tr>
+                        <tr>
+                            <td>Boolean</td>
+                            <td>Check whether an order is paid</td>
+                            <td><code>$is_paid = false;</code></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <h3>Output</h3>
-            <p>My name is <?php echo $studentname; ?>.</p>
-            <p>I am <?php echo $Age; ?> years old.</p>
-            <p>My favorite programming language is <?php echo $Favorite; ?></p>
-            <p>My GPA is <?php echo $GPA; ?></p>
-            <p>Student Status: <?php echo $student_status ? "Active" : "Inactive"?></p> 
-            <br>
-            <p>Purchase Information</p>
-            <p>I want to buy <?php echo $Quantity; ?> Keyboard.</p>
-            <p>The price of each Keyboard is $<?php echo $Price; ?>.</p>
-            <p>Product Status: <?php echo $product_status ? "Available" : "Out of Stock"?></p>
-            <br>
-            <p>Total Purchase Amount: $<?php echo $TOTAL; ?>.</p>
         </section>
-        <section>
-            <h2 class="whatihavelearned">What I Have Learned</h2>
-            <h3>Why do PHP variables start with $?</h3>
-            <p>PHP variables start with a dollar sign (`$`) because the language was directly influenced by Perl and Unix shell scripting, where `$` acts as a sigil—a special prefix character that tells the PHP parser, "what follows is a variable name."</p>
-            <h3>What is variable in PHP?</h3>
-            <p>A named container or "storage locker" in memory used to hold data that your script can read, update, or use later.</p>
-            <h3>What is a String?</h3>
-            <p>A sequence of characters—such as letters, numbers, spaces, or symbols—wrapped in single or double quotes used to represent text.</p>
-            <h3>What is an Integer?</h3>
-            <p>A whole number without any decimal points, which can be either positive, zero, or negative (e.g., -15, 0, 42).</p>
-            <h3>What is a Float?</h3>
-            <p>Float (Floating-point number): A number that contains a decimal point or fractional part (e.g., 3.14, -0.001, 10.0).</p>
-            <h3>What is a Boolean?</h3>
-            <p>Boolean: The simplest data type, representing a logical value that can only be either true or false.</p>
-            <h3>The difference between:</h3>
-            <code class="code-example">"21"</code>
-            <code class="code-example">21</code>
-            <br>
-            <br>
-            <p>"21" (String): PHP treats this as textual characters, wrapped in quotation marks. Even though it looks like a number, it behaves like words or letters.</p>
-            <p>21 (Integer): PHP treats this as a whole number. It has no quotes and is stored in memory as a numerical value ready for mathematical calculations.</p>
-            <h3>What Happens When a Boolean is true or false?</h3>
-            <p><strong>In Control Flow (if statements):</strong></p> 
-            <ul>
-                <li>If a condition evaluates to <strong>true</strong>, PHP executes the code inside that if block.</li>
-                <li>If a condition evaluates to <strong>false</strong>, PHP skips that block entirely and moves to the next instruction (or runs an else block if provided).</li>
-            </ul>
-            <p><strong>When Outputting (echo / print):</strong></p>
-            <ul>
-                <li>Printing true converts the value to the string "1".</li>
-                <li>Printing false converts the value to an empty string "" (it prints nothing to the screen).</li>
-            </ul>
-            <div class="code-example">
-                <code>
-                    $is_admin = true;<br>
-                    <br>
-                    if ($is_admin) {
-                        echo "Welcome to the admin dashboard!"; // This runs because $is_admin is true.
-                    }<br>
-                </code>
+
+        <section class="lesson-section final-challenge" id="challenge">
+            <p class="label">FINAL CHALLENGE</p>
+            <h2>Student Profile Card</h2>
+
+            <div class="example-grid">
+                <div class="code-example">
+                    <span class="block-label">PHP code</span>
+                    <pre><code>$student_name = "Ivan Lee Dorillo";
+$course = "BSIT";
+$school = "BTECH";
+$favorite_language = "PHP";
+$year_level = 3;
+$is_student = true;
+$is_available_for_internship = true;</code></pre>
+                </div>
+                <div class="student-card">
+                    <span class="status"><?php echo $is_student ? "Active student" : "Inactive"; ?></span>
+                    <h3><?php echo $student_name; ?></h3>
+                    <p><?php echo $course; ?> · Year <?php echo $year_level; ?></p>
+                    <hr>
+                    <p><span>School</span> <?php echo $school; ?></p>
+                    <p><span>Age</span> <?php echo $age; ?></p>
+                    <p><span>Favorite language</span> <?php echo $favorite_language; ?></p>
+                    <p><span>GPA</span> <?php echo number_format($gpa, 2); ?></p>
+                    <p><span>Internship</span> <?php echo $is_available_for_internship ? "Available" : "Not available"; ?></p>
+                </div>
             </div>
-            <h3>Why $student_name is Better Than $x</h3>
-            <ul>
-                <li>Self-Documentation: A clear name instantly reveals what data the variable holds without needing extra comments.</li>
-                <li>Maintainability: When you or another developer return to the codebase months later, $student_name is immediately readable, whereas $x forces you to trace back through the code to figure out what it represents.</li>
-                <li>Prevents Bugs: Using vague names like $x, $y, and $z increases the risk of accidentally assigning or overwriting the wrong data.</li>
-            </ul>
-            <h3>Real-life example for each data type.</h3>
-            <table border="1">
-            <thead>
-                <tr>
-                <th>Data Type</th>
-                <th>Real-Life Example</th>
-                <th>PHP Code</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                <td>String (Text)</td>
-                <td>Storing a user's full name or email address</td>
-                <td>$user_email = "ivan.lee@example.com";</td>
-                </tr>
-                <tr>
-                <td>Integer (Whole number)</td>
-                <td>Counting items in a shopping cart or student enrollment</td>
-                <td>$items_in_cart = 3;</td>
-                </tr>
-                <tr>
-                <td>Float / Double (Decimal number)</td>
-                <td>Tracking product prices or grade point averages (GPA)</td>
-                <td>$product_price = 49.99;</td>
-                </tr>
-                <tr>
-                <td>Boolean (True/False)</td>
-                <td>Checking if an order has been paid or if an account is active</td>
-                <td>$is_paid = false;</td>
-                </tr>
-            </tbody>
-            </table>           
         </section>
-        <section>
-            <h2>Final Challenge — Student Profile Card</h2>
-            <div class="code-example">
-                <code>
-                    $student_name = "Ivan Lee Dorillo"; <br>
-                    $course = "BSIT";<br>
-                    $age = 21;<br>
-                    $school = "BTECH";<br>
-                    $favorite_language = "PHP";<br>
-                    $gpa = 1.80;<br>
-                    $year_level = 3;<br>
-                    $is_student = True;<br>
-                    $is_available_for_internship = True;<br>
-                </code>
-            </div>
-            <h3>OUTPUT</h3>
-            <p>Student Profile</p>
-            <p><?php echo $student_name; ?></p>
-            <p><?php echo $course; ?> - <?php echo $year_level; ?></p>
-            <br>
-            <p>School: <?php echo $school; ?></p>
-            <p>Age: <?php echo $age; ?></p>
-            <p>Favorite Language: <?php echo $favorite_language; ?></p>
-            <p>GPA: <?php echo $gpa; ?></p>
-            <br>
-            <p>Student Status: <?php echo $is_student ? "Active" : "Inactive"; ?></p> 
-            <p>Available for Internship: <?php echo $is_available_for_internship ? "Yes" : "No"; ?></p>
-        </section>
-        <section class="final_sections">
-            <h1>THANKKK YOUUU</h1>
-        </section>
+
+        <nav class="lesson-navigation" aria-label="Lesson navigation">
+            <a href="../../index.php">&larr; All lessons</a>
+            <a href="../02-arithmetic/index.php">Next: Arithmetic &rarr;</a>
+        </nav>
     </main>
 
+    <footer>
+        <p>PHP Learning Journey — Ivan Lee Dorillo</p>
+        <p>Learn. Practice. Build.</p>
+    </footer>
 </body>
 
 </html>

@@ -185,7 +185,7 @@ $completed_lessons = 1;
 
 
                 <!-- UPCOMING -->
-                <a href="lessons\02-arithmetic\index.php" class="lesson-card completed">
+                <a href="lessons/02-arithmetic/index.php" class="lesson-card completed">
                     <div class="lesson-number">
                         02
                     </div>

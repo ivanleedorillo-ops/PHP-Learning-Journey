@@ -273,7 +273,7 @@ code {
     border-top: 4px solid #1d4ed8;
 }
 
-.challenge-section > p:not(.label) {
+.challenge-section>p:not(.label) {
     color: #6b7280;
 }
 
@@ -352,7 +352,7 @@ td {
     color: #1f2937;
 }
 
-.student-card > .status {
+.student-card>.status {
     display: inline-block;
     background-color: #dcfce7;
     color: #166534;
@@ -449,4 +449,3 @@ footer p {
         text-align: center;
     }
 }
-

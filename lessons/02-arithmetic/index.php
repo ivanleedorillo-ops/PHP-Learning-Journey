@@ -135,6 +135,59 @@ $finaltotal = $subtotal - $discountamount;
                 </div>
             </div>
         </section>
+        <section class="lesson-section" id="what-i-have-learned">
+            <div class="section-heading">
+                <div>
+                    <p class="label">This is what i learned</p>
+                    <h2>What I Have Learned</h2>
+                </div>
+                <span class="type-badge">Reflections</span>
+            </div>
+            <br>
+            <p class="learned-note">
+                <strong>What is arithmetic in PHP?</strong> Arithmetic in PHP refers to performing mathematical operations on numeric values (integers and floats) using standard arithmetic operators. PHP automatically handles type conversion between integers and floating-point numbers during operations.
+            </p>
+            <br>
+            <p class="learned-note">
+                <strong>What does + do?</strong>Combines numbers together (5 + 3 gives 8). It also merges two arrays, but it is never used to join text.
+            </p>
+            <br>
+            <p class="learned-note">
+                <strong>What does - do?</strong> Takes one number away from another (10 - 4 gives 6) or makes a number negative (-5).
+            </p>
+            <br>
+            <p class="learned-note">
+                <strong>What does * do?</strong> Multiplies numbers (4 * 3 gives 12).
+            </p>
+            <br>
+            <p class="learned-note">
+                <strong>What does / do?</strong> Divides one number by another and gives the full answer, including decimals (7 / 2 gives 3.5).
+            </p>
+            <br>
+            <p class="learned-note">
+                <strong>What does % do?</strong> Divides numbers and gives only the remainder left over (7 % 2 gives 1).
+            </p>
+            <br>
+            <p class="learned-note">
+                <strong>What does ** do?</strong> Raises a number to a power (2 ** 3 means $2 \times 2 \times 2$, which gives 8).
+            </p>
+            <br>
+            <p class="learned-note">
+                <strong>What is the difference between / and %?</strong> The division operator (/) returns how many times one number fits into another, including decimal fractions if it doesn't divide evenly. The modulo operator (%) ignores the fractional quotient and returns only the integer leftover remainder.
+            </p>
+            <br>
+            <p class="learned-note">
+                <strong>Can arithmetic be performed using variables?</strong> Yes. You can hold numbers in variables and do math with them:
+                    $price = 10;
+$tax = 2;
+$total = $price + $tax; // 12
+            </p>
+            <br>
+            <p class="learned-note">
+                <strong>Why store a calculation inside a variable?</strong> Storing the calculation in **`$total`** saves the result so PHP only does the math **once**, makes your code much **easier to read**, and allows you to **update the formula in just one place** instead of fixing repeated code everywhere.
+            </p>
+            
+        </section>
     </main>
 </body>
 

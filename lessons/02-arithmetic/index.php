@@ -15,15 +15,42 @@ $Modulus = $num1 % $num2;
 $Exponent = $num1 ** $num2;
 
 //Practice Task — Shopping Calculator
-$product_name = "Iphone 17 pro max";
-$price = 1500;
-$quantity = 2;
-$discount = 0.30;
+$shopping_product_name = "Iphone 17 pro max";
+$shopping_price = 1500;
+$shopping_quantity = 2;
+$shopping_discount = 0.30;
 
-$subtotal = $price * $quantity;
-$discountamount = $subtotal * $discount;
-$finaltotal = $subtotal - $discountamount;
+$shopping_subtotal = $shopping_price * $shopping_quantity;
+$shopping_discount_amount = $shopping_subtotal * $shopping_discount;
+$shopping_final_total = $shopping_subtotal - $shopping_discount_amount;
+// ========================================
+// Final Challenge — Simple Store Receipt
+// ========================================
+
+$customer_name = "John Ram Dorillo";
+$cash = 500;
+
+$product_name = "Gaming Chair";
+$product_price = 100.55;
+$quantity = 2;
+
+$discount_rate = 0.50; // 50%
+$tax_rate = 0.10; // 10%
+
+// Calculations
+$sub_total = $product_price * $quantity;
+
+$discount_amount = $sub_total * $discount_rate;
+$discounted_total = $sub_total - $discount_amount;
+
+$tax_amount = $discounted_total * $tax_rate;
+
+$final_total = $discounted_total + $tax_amount;
+
+$change_amount = $cash - $final_total;
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -115,27 +142,27 @@ $Exponent = $num1 ** $num2;
                     <span class="block-label">PHP code</span>
                     <pre>
                         <code>
-$product_name = "Iphone 17 pro max";
-$price = 1500;
-$quantity = 2;
-$discount = 0.30;
+$shopping_product_name = "Iphone 17 pro max";
+$shopping_price = 1500;
+$shopping_quantity = 2;
+$shopping_discount = 0.30;
 
-$subtotal = $price * $quantity;
-$discountamount = $subtotal * $discount;
-$finaltotal = $subtotal - $discountamount;
+$shopping_subtotal = $shopping_price * $shopping_quantity;
+$shopping_discount_amount = $shopping_subtotal * $shopping_discount;
+$shopping_final_total = $shopping_subtotal - $shopping_discount_amount;
                         </code>
                     </pre>
  
                 </div>
                 <div class="output-example">
                     <span class="block-label">Shopping Information</span>
-                    <p>Product name: <?php echo $product_name; ?></p>
-                    <p>Price: <?php echo $price; ?></p>
-                    <p>Quantity: <?php echo $quantity; ?></p>
+                    <p>Product name: <?php echo $shopping_product_name; ?></p>
+                    <p>Price: <?php echo $shopping_price; ?></p>
+                    <p>Quantity: <?php echo $shopping_quantity; ?></p>
                     <br>
-                    <p>Subtotal: <?php echo $subtotal; ?></p>
-                    <p>Discount amount: <?php echo $discountamount; ?></p>
-                    <p>Final total: <?php echo $finaltotal; ?></p>
+                    <p>Subtotal: <?php echo $shopping_subtotal; ?></p>
+                    <p>Discount amount: <?php echo $shopping_discount_amount; ?></p>
+                    <p>Final total: <?php echo $shopping_final_total; ?></p>
                 </div>
             </div>
         </section>
@@ -208,75 +235,119 @@ $total = $price + $tax; // 12
              <p>If you want to change that order, you can just use parentheses (). Anything inside parentheses always gets calculated first. So if you change the same problem to (10 + 2) * 5, PHP adds 10 + 2 first to get 12, and then multiplies it by 5 to get 60. Parentheses are super helpful when you want to override the default math rules or just make your code easier to read.</p>
         </section>
         <section class="lesson-section" id="final-challenge">
-            <div class="label">Final Challenge</div>
-            <h2>Simple Store Receipt</h2>
+
+            <div class="section-heading">
+                <div>
+                    <p class="label">Final Challenge</p>
+                    <h2>Simple Store Receipt</h2>
+                </div>
+
+                <span class="type-badge">Store Calculator</span>
+            </div>
 
             <div class="example-grid">
+
                 <div class="code-example">
-                    <span class="block-label">PHP code</span>
-                    <pre>
-                        <code>
-<?php
-//Final Challenge — Simple Store Receipt
-$customer_name = "John Ram Dorillo";
-$cash = 500;
-$product_name = "Gaming Chair";
-$product_price = 100.55;
-$quantity = 2;
-$discount_rate= 0.50;
-$tax_rate= 0.10;
+                    <span class="block-label">PHP Code</span>
 
-// Calculations
-$sub_total = $product_price * $quantity;
-$discount_total = $sub_total * $discount_rate;
-$discounted_total = $sub_total - $discount_total;
-$tax_amount = $discounted_total * $tax_rate;
+                    <pre><code>$customer_name = "John Ram Dorillo";
+        $cash = 500;
 
-$final_total = $discounted_total + $tax_amount;
+        $product_name = "Gaming Chair";
+        $product_price = 100.55;
+        $quantity = 2;
 
-$change_amount = $cash - $final_total;
+        $discount_rate = 0.50;
+        $tax_rate = 0.10;
 
-?>
-//Final Challenge — Simple Store Receipt
-$customer_name = "John Ram Dorillo";
-$cash = 500;
-$product_name = "Gaming Chair";
-$product_price = 100.55;
-$quantity = 2;
-$discount_rate= 0.50;
-$tax_rate= 0.10;
+        $sub_total = $product_price * $quantity;
 
-// Calculations
-$sub_total = $product_price * $quantity;
-$discount_total = $sub_total * $discount_rate;
-$tax_amount = $discount_total * $tax_rate;
+        $discount_amount = $sub_total * $discount_rate;
+        $discounted_total = $sub_total - $discount_amount;
 
-$final_total = $discount_total + $tax_amount;
+        $tax_amount = $discounted_total * $tax_rate;
 
-$change_amount = $cash - $final_total;
-                        </code>
-                    </pre>
+        $final_total = $discounted_total + $tax_amount;
+
+        $change_amount = $cash - $final_total;</code></pre>
+
                 </div>
+
                 <div class="output-example">
+
                     <span class="block-label">STORE RECEIPT</span>
-                    <p>Customer: <?php echo $customer_name;?></p>
-                    <br>
-                    <p>Cash: $<?php echo $cash;?></p>
-                    <p>Product: <?php echo $product_name;?></p>
-                    <p>Product Price: $<?php echo $product_price;?></p>
-                    <p>Quantity: <?php echo $quantity;?></p>
-                    <br>
-                    <p>----------------------------------</p>
-                    <br> 
-                    <p>Subtotal: <?php echo $sub_total;?></p>
-                    <p>Discount: <?php echo $discount_rate;?></p>
-                    <p>Tax: <?php echo $tax_rate;?></p>
-                    <br>
-                    <p>----------------------------------</p>
-                    <br>
-                    <p>Final Total: <?php echo $final_total;?></p>
-                    <p>Change: <?php echo $change_amount;?></p>
+
+                    <p>
+                        Customer:
+                        <strong><?php echo $customer_name; ?></strong>
+                    </p>
+
+                    <p>
+                        Product:
+                        <?php echo $product_name; ?>
+                    </p>
+
+                    <p>
+                        Product Price:
+                        $<?php echo number_format($product_price, 2); ?>
+                    </p>
+
+                    <p>
+                        Quantity:
+                        <?php echo $quantity; ?>
+                    </p>
+
+                    <hr>
+
+                    <p>
+                        Subtotal:
+                        $<?php echo number_format($sub_total, 2); ?>
+                    </p>
+
+                    <p>
+                        Discount Rate:
+                        <?php echo $discount_rate * 100; ?>%
+                    </p>
+
+                    <p>
+                        Discount Amount:
+                        -$<?php echo number_format($discount_amount, 2); ?>
+                    </p>
+
+                    <p>
+                        After Discount:
+                        $<?php echo number_format($discounted_total, 2); ?>
+                    </p>
+
+                    <p>
+                        Tax Rate:
+                        <?php echo $tax_rate * 100; ?>%
+                    </p>
+
+                    <p>
+                        Tax Amount:
+                        $<?php echo number_format($tax_amount, 2); ?>
+                    </p>
+
+                    <hr>
+
+                    <p class="total">
+                        Final Total:
+                        $<?php echo number_format($final_total, 2); ?>
+                    </p>
+
+                    <p>
+                        Cash:
+                        $<?php echo number_format($cash, 2); ?>
+                    </p>
+
+                    <p>
+                        Change:
+                        $<?php echo number_format($change_amount, 2); ?>
+                    </p>
+
                 </div>
+
             </div>
 
         </section>

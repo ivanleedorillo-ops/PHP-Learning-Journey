@@ -56,11 +56,15 @@ $finaltotal = $subtotal - $discountamount;
             </div>
             <div>
                 <span>Status</span>
-                <strong class="on-going-text">Working</strong>
+                <strong class="completed-text">Completed</strong>
             </div>
         </section>
         <nav class="topic-navigation" aria-label="Lesson-topics">
             <a href="#arithmetic-operators">Arithmetic Operators</a>
+            <a href="#practice-task">Practice Task</a>
+            <a href="#what-i-have-learned">What I Have Learned</a>
+            <a href="#arithmeticn-notes">Arithmetic notes</a>
+            <a href="#final-challenge">Final Challenge</a>
         </nav>
         <section class="lesson-section" id="arithmetic-operators">
             <div class="section-heading">
@@ -186,9 +190,105 @@ $total = $price + $tax; // 12
             <p class="learned-note">
                 <strong>Why store a calculation inside a variable?</strong> Storing the calculation in **`$total`** saves the result so PHP only does the math **once**, makes your code much **easier to read**, and allows you to **update the formula in just one place** instead of fixing repeated code everywhere.
             </p>
-            
         </section>
+        <section class="lesson-section" id="arithmeticn-notes">
+            <div class="section-heading">
+                <div>
+                    <p class="label">Arithmetic notes</p>
+                    <h2>Important PHP Arithmetic Notes</h2>
+                </div>
+                <span class="type-badge">Notes</span>
+            </div>
+            <p>PHP has basic math operators that work just like regular math. You can add (+), subtract (-), multiply (*), and divide (/). There are also two special ones: modulo (%), which gives you the remainder of a division, and exponentiation (**), which raises a number to a power (so 2 ** 3 is $2^3$, which equals 8). One cool thing about division in PHP is that if the answer isn't a whole number,
+                 it automatically turns into a decimal, so 5 / 2 gives you 2.5.</p> 
+             <br>
+             <p>PHP also follows the usual order of operations (PEMDAS), which means it does some math before others. It does powers first, then multiplication, division, and modulo, and finally addition and subtraction. If operators have the same priority—like multiplication and division—it just works through them from left to right. Because of this rule, something like 10 + 2 * 5
+                 comes out to 20 because PHP multiplies 2 * 5 first before adding 10.</p>
+             <br>
+             <p>If you want to change that order, you can just use parentheses (). Anything inside parentheses always gets calculated first. So if you change the same problem to (10 + 2) * 5, PHP adds 10 + 2 first to get 12, and then multiplies it by 5 to get 60. Parentheses are super helpful when you want to override the default math rules or just make your code easier to read.</p>
+        </section>
+        <section class="lesson-section" id="final-challenge">
+            <div class="label">Final Challenge</div>
+            <h2>Simple Store Receipt</h2>
+
+            <div class="example-grid">
+                <div class="code-example">
+                    <span class="block-label">PHP code</span>
+                    <pre>
+                        <code>
+<?php
+//Final Challenge — Simple Store Receipt
+$customer_name = "John Ram Dorillo";
+$cash = 500;
+$product_name = "Gaming Chair";
+$product_price = 100.55;
+$quantity = 2;
+$discount_rate= 0.50;
+$tax_rate= 0.10;
+
+// Calculations
+$sub_total = $product_price * $quantity;
+$discount_total = $sub_total * $discount_rate;
+$discounted_total = $sub_total - $discount_total;
+$tax_amount = $discounted_total * $tax_rate;
+
+$final_total = $discounted_total + $tax_amount;
+
+$change_amount = $cash - $final_total;
+
+?>
+//Final Challenge — Simple Store Receipt
+$customer_name = "John Ram Dorillo";
+$cash = 500;
+$product_name = "Gaming Chair";
+$product_price = 100.55;
+$quantity = 2;
+$discount_rate= 0.50;
+$tax_rate= 0.10;
+
+// Calculations
+$sub_total = $product_price * $quantity;
+$discount_total = $sub_total * $discount_rate;
+$tax_amount = $discount_total * $tax_rate;
+
+$final_total = $discount_total + $tax_amount;
+
+$change_amount = $cash - $final_total;
+                        </code>
+                    </pre>
+                </div>
+                <div class="output-example">
+                    <span class="block-label">STORE RECEIPT</span>
+                    <p>Customer: <?php echo $customer_name;?></p>
+                    <br>
+                    <p>Cash: $<?php echo $cash;?></p>
+                    <p>Product: <?php echo $product_name;?></p>
+                    <p>Product Price: $<?php echo $product_price;?></p>
+                    <p>Quantity: <?php echo $quantity;?></p>
+                    <br>
+                    <p>----------------------------------</p>
+                    <br> 
+                    <p>Subtotal: <?php echo $sub_total;?></p>
+                    <p>Discount: <?php echo $discount_rate;?></p>
+                    <p>Tax: <?php echo $tax_rate;?></p>
+                    <br>
+                    <p>----------------------------------</p>
+                    <br>
+                    <p>Final Total: <?php echo $final_total;?></p>
+                    <p>Change: <?php echo $change_amount;?></p>
+                </div>
+            </div>
+
+        </section>
+        <nav class="lesson-navigation" aria-label="Lesson navigation">
+            <a href="../../index.php">&larr; All lessons</a>
+            <a href="../03-strings-and-concatenation/index.php">Next: $_GET and $_POST &rarr;</a>
+        </nav>
     </main>
+    <footer>
+        <p>PHP Learning Journey — Ivan Lee Dorillo</p>
+        <p>Learn. Practice. Build.</p>
+    </footer>
 </body>
 
 </html>

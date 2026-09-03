@@ -183,8 +183,6 @@ $completed_lessons = 1;
                     </span>
                 </a>
 
-
-                <!-- UPCOMING -->
                 <a href="lessons/02-arithmetic/index.php" class="lesson-card completed">
                     <div class="lesson-number">
                         02
@@ -195,14 +193,14 @@ $completed_lessons = 1;
                             Perform calculations using PHP variables and arithmetic operators.
                         </p>
                     </div>
-                    <span class="status upcoming">
-                        Working
+                    <span class="status">
+                        Completed
                     </span>
                 </a>
 
 
-                <div class="lesson-card">
-
+                <a href="lessons/03-get-and-post/index.php"
+                class="lesson-card completed">
                     <div class="lesson-number">03</div>
 
                     <div class="lesson-info">
@@ -214,9 +212,9 @@ $completed_lessons = 1;
                     </div>
 
                     <span class="status upcoming">
-                        Upcoming
+                        working
                     </span>
-
+                </a>
                 </div>
 
 

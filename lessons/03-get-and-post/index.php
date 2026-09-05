@@ -74,7 +74,54 @@
                     </form>
                 </div>
             </div>
+        </section>
+        <section class="lesson-section" id="understanding-get">
+            <div class="section-heading">
+                <div>
+                    <p class="label">UNDERSTANDING POST</p>
+                    <h2>$_POST</h2>
+                </div>
+                <span class="badge">$_POST</span>
+            </div>
+            <p class="note">
+                <strong>Meaning:</strong> $_POST is a superglobal associative array in PHP used to collect data sent via the HTTP request body (e.g., from an HTML form using method="post"), keeping the submitted data hidden from the URL bar.
+            </p>
+            <div class="example-grid">
+                <div class="code-example">
+                    <span class="block-label">PHP code</span>
+                    <pre><code>
+<?php
+$username = "";
+$fav_language = "";
+    if ($_SERVER["REQUEST_METHOD"]== "POST"){
+        $username = htmlspecialchars($_POST['username']?? '');
+        $fav_language = htmlspecialchars($_POST['fav_language']?? '');
 
+    }
+?>
+    if ($_SERVER["REQUEST_METHOD"]== "POST"){
+        $username = htmlspecialchars($_POST['username']?? '');
+        $fav_language = htmlspecialchars($_POST['fav_language']?? '');
+
+    }
+
+                    </code></pre>
+                </div>
+                <div class="output-example">
+                    <span class="block-label">Output</span>
+                    <form action="" method="post">
+                        <label for="username">Username: </label>
+                        <input type="text" name="username" id="username" placeholder="Enter your username">
+                        <br>
+                        <label for="fav_language">Favorite Programming Language: </label>
+                        <input type="text" name="fav_language" id="fav_language" placeholder="PHP, HTML, CSS, JavaScript, etc...">
+                        <input type="submit" value="Submit">
+                        <br>
+                        <p><strong>Username: <?php echo $username; ?></strong></p>
+                        <p><strong>Favorite Programming Language: <?php echo $fav_language; ?></strong></p>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
 </body>

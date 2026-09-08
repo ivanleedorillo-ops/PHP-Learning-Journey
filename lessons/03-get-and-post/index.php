@@ -53,6 +53,7 @@
                     <span class="block-label">PHP code</span>
                     <pre><code>
 <?php
+$name= "";
     if (isset($_GET['name'])) {
         $submittedName = htmlspecialchars($_GET['name']);
         
@@ -122,6 +123,75 @@ $fav_language = "";
                     </form>
                 </div>
             </div>
+        </section>
+        <section class="lesson-section" id="practice-task">
+            <div class="section-heading">
+                <div>
+                    <p class="label">PRACTICE TASK</p>
+                    <h2>Student Information Form</h2>
+                </div>
+                <span class="badge">Practice</span>
+            </div>
+            <p class="note">
+                <strong>Task:</strong>
+                Create a form with the following fields: Name, Age, and Email. Process the form using PHP and display the submitted information on a separate results page. Use the $_POST method to retrieve the data. Add basic validation to ensure that all fields are filled.
+            </p>
+            <div class="example-grid">
+                <div class="code-example">
+                    <span class="block-label">PHP code</span>
+                    <pre>
+                        <code>
+<?php
+$student_name = "";
+$course = "";
+$year_level = "";
+$school = "";
+    if ($_SERVER["REQUEST_METHOD"] == "POST"){
+        $student_name = htmlspecialchars($_POST['student_name']?? '');
+        $course = htmlspecialchars($_POST['course']?? '');
+        $year_level = htmlspecialchars($_POST['year_level']?? '');
+        $school = htmlspecialchars($_POST['school']?? '');
+        
+    }
+?>
+$student_name = "";
+$course = "";
+$year_level = "";
+$school = "";
+    if ($_SERVER["REQUEST_METHOD"] == "POST"){
+        $student_name = htmlspecialchars($_POST['student_name']?? '');
+        $course = htmlspecialchars($_POST['course']?? '');
+        $year_level = htmlspecialchars($_POST['year_level']?? '');
+        $school = htmlspecialchars($_POST['school']?? '');
+    }
+                        </code>
+                    </pre>
+                </div>
+                <div class="output-example">
+                    <span class="block-label">Output</span>
+                    <form action="" method="post">
+                        <label for="student_name">Name: </label>
+                        <input type="text" name="student_name" id="student_name" placeholder="Enter your name">
+                        <br>
+                        <label for="course">Course: </label>
+                        <input type="text" name="course" id="course" placeholder="Enter your course">
+                        <br>
+                        <label for="year_level">Year Level: </label>
+                        <input type="text" name="year_level" id="year_level" placeholder="Enter your year level">
+                        <br>
+                        <label for="school">School: </label>
+                        <input type="text" name="school" id="school" placeholder="Enter your school">
+                        <br>
+                        <input type="submit" value="Submit">
+                        <br>
+                        <p><strong>Name: <?php echo $student_name; ?></strong></p>
+                        <p><strong>Course: <?php echo $course; ?></strong></p>
+                        <p><strong>Year Level: <?php echo $year_level; ?></strong></p>
+                        <p><strong>School: <?php echo $school; ?></strong></p>
+                    </form>
+                </div>
+            </div>
+
         </section>
     </main>
 </body>

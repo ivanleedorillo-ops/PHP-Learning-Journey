@@ -171,6 +171,7 @@ main {
 }
 
 .type-badge,
+.badge,
 .status {
     background-color: #dbeafe;
     color: #1d4ed8;
@@ -247,6 +248,14 @@ code {
     font-family: Consolas, monospace;
 }
 
+:not(pre) > code {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
 .code-example code {
     font-size: 13px;
     line-height: 1.8;
@@ -270,7 +279,7 @@ code {
 }
 
 .learned-note {
-    margin: 0;
+    margin: 0 0 16px 0;
     padding: 18px 20px;
     color: #374151;
     line-height: 1.7;
@@ -280,11 +289,34 @@ code {
     border-radius: 8px;
 }
 
-.learned-note strong {
+.learned-note:last-child {
+    margin-bottom: 0;
+}
+
+.learned-note > strong:first-child {
     display: block;
     margin-bottom: 6px;
     color: #1d4ed8;
     font-size: 1.05rem;
+}
+
+.learned-note p {
+    margin-bottom: 6px;
+}
+
+.learned-note p:last-child {
+    margin-bottom: 0;
+}
+
+.learned-note .sub-item {
+    margin-top: 6px;
+}
+
+.learned-note .sub-item strong {
+    display: inline;
+    color: #1f2937;
+    font-size: 1rem;
+    margin-bottom: 0;
 }
 
 .total {

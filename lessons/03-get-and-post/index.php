@@ -11,10 +11,10 @@
     <header class="lesson-header">
         <div class="header-content">
             <a class="back-button" href="../../index.php">&larr; Back to lessons</a>
-            <p class="label">LESSON 01 · PHP FUNDAMENTALS</p>
-            <h1>Variables and Data Types</h1>
+            <p class="label">LESSON 03 · PHP FUNDAMENTALS</p>
+            <h1>$_GET and $_POST</h1>
             <p class="description">
-                Learn how PHP stores information using variables, strings, integers, floats, and booleans.
+                Learn how PHP receives information submitted through forms and URLs.
             </p>
         </div>
     </header>
@@ -35,7 +35,10 @@
             </div>
         </section>
         <nav class="topic-navigation" aria-label="Lesson Topics">
-            <a href="#understanding-get">Understanding $_GET</a>
+            <a href="#understanding-get">$_GET</a>
+            <a href="#understanding-post">$_POST</a>
+            <a href="#practice-task">Practice Task</a>
+            <a href="#what-i-have-learned">What I Have Learned</a>
         </nav>
         <section class="lesson-section" id="understanding-get">
             <div class="section-heading">
@@ -43,7 +46,7 @@
                     <p class="label">UNDERSTANDING GET</p>
                     <h2>$_GET</h2>
                 </div>
-                <span class="badge">$_GET</span>
+                <span class="type-badge">$_GET</span>
             </div>
             <p class="note">
                 <strong>Meaning:</strong> `$_GET` is a superglobal associative array in PHP used to collect data sent via URL parameters (e.g., `page.php?user=Alex`).
@@ -53,15 +56,15 @@
                     <span class="block-label">PHP code</span>
                     <pre><code>
 <?php
-$name= "";
-    if (isset($_GET['name'])) {
-        $submittedName = htmlspecialchars($_GET['name']);
-        
-    }
-    ?>
-    if (isset($_GET['name'])) {
-        $submittedName = htmlspecialchars($_GET['name']);
-    }
+$name = "";
+$submittedName = "";
+if (isset($_GET['name'])) {
+    $submittedName = htmlspecialchars($_GET['name']);
+}
+?>
+if (isset($_GET['name'])) {
+    $submittedName = htmlspecialchars($_GET['name']);
+}
                     </code></pre>
                 </div>
                 <div class="output-example">
@@ -76,13 +79,13 @@ $name= "";
                 </div>
             </div>
         </section>
-        <section class="lesson-section" id="understanding-get">
+        <section class="lesson-section" id="understanding-post">
             <div class="section-heading">
                 <div>
                     <p class="label">UNDERSTANDING POST</p>
                     <h2>$_POST</h2>
                 </div>
-                <span class="badge">$_POST</span>
+                <span class="type-badge">$_POST</span>
             </div>
             <p class="note">
                 <strong>Meaning:</strong> $_POST is a superglobal associative array in PHP used to collect data sent via the HTTP request body (e.g., from an HTML form using method="post"), keeping the submitted data hidden from the URL bar.
@@ -94,17 +97,15 @@ $name= "";
 <?php
 $username = "";
 $fav_language = "";
-    if ($_SERVER["REQUEST_METHOD"]== "POST"){
-        $username = htmlspecialchars($_POST['username']?? '');
-        $fav_language = htmlspecialchars($_POST['fav_language']?? '');
-
-    }
+if (($_SERVER["REQUEST_METHOD"] ?? '') === "POST") {
+    $username = htmlspecialchars($_POST['username'] ?? '');
+    $fav_language = htmlspecialchars($_POST['fav_language'] ?? '');
+}
 ?>
-    if ($_SERVER["REQUEST_METHOD"]== "POST"){
-        $username = htmlspecialchars($_POST['username']?? '');
-        $fav_language = htmlspecialchars($_POST['fav_language']?? '');
-
-    }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = htmlspecialchars($_POST['username'] ?? '');
+    $fav_language = htmlspecialchars($_POST['fav_language'] ?? '');
+}
 
                     </code></pre>
                 </div>
@@ -130,7 +131,7 @@ $fav_language = "";
                     <p class="label">PRACTICE TASK</p>
                     <h2>Student Information Form</h2>
                 </div>
-                <span class="badge">Practice</span>
+                <span class="type-badge">Practice</span>
             </div>
             <p class="note">
                 <strong>Task:</strong>
@@ -146,24 +147,23 @@ $student_name = "";
 $course = "";
 $year_level = "";
 $school = "";
-    if ($_SERVER["REQUEST_METHOD"] == "POST"){
-        $student_name = htmlspecialchars($_POST['student_name']?? '');
-        $course = htmlspecialchars($_POST['course']?? '');
-        $year_level = htmlspecialchars($_POST['year_level']?? '');
-        $school = htmlspecialchars($_POST['school']?? '');
-        
-    }
+if (($_SERVER["REQUEST_METHOD"] ?? '') === "POST") {
+    $student_name = htmlspecialchars($_POST['student_name'] ?? '');
+    $course = htmlspecialchars($_POST['course'] ?? '');
+    $year_level = htmlspecialchars($_POST['year_level'] ?? '');
+    $school = htmlspecialchars($_POST['school'] ?? '');
+}
 ?>
 $student_name = "";
 $course = "";
 $year_level = "";
 $school = "";
-    if ($_SERVER["REQUEST_METHOD"] == "POST"){
-        $student_name = htmlspecialchars($_POST['student_name']?? '');
-        $course = htmlspecialchars($_POST['course']?? '');
-        $year_level = htmlspecialchars($_POST['year_level']?? '');
-        $school = htmlspecialchars($_POST['school']?? '');
-    }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $student_name = htmlspecialchars($_POST['student_name'] ?? '');
+    $course = htmlspecialchars($_POST['course'] ?? '');
+    $year_level = htmlspecialchars($_POST['year_level'] ?? '');
+    $school = htmlspecialchars($_POST['school'] ?? '');
+}
                         </code>
                     </pre>
                 </div>
@@ -191,8 +191,90 @@ $school = "";
                     </form>
                 </div>
             </div>
-
         </section>
+
+        <section class="lesson-section" id="what-i-have-learned">
+            <div class="section-heading">
+                <div>
+                    <p class="label">This is what I learned</p>
+                    <h2>What I Have Learned</h2>
+                </div>
+                <span class="type-badge">Reflections</span>
+            </div>
+
+            <div class="learned-note">
+                <strong>$_GET</strong>
+                <p>A PHP superglobal array used to collect data submitted via an HTML form with the <code>method="GET"</code> attribute, or data passed directly through URL parameters.</p>
+            </div>
+
+            <div class="learned-note">
+                <strong>$_POST</strong>
+                <p>A PHP superglobal array used to collect data submitted via an HTML form using the <code>method="POST"</code> attribute, sending data inside the HTTP request body rather than the URL.</p>
+            </div>
+
+            <div class="learned-note">
+                <strong>The method Attribute</strong>
+                <p>Specifies the HTTP method used to send form data to the server when submitted (typically <code>GET</code> or <code>POST</code>).</p>
+            </div>
+
+            <div class="learned-note">
+                <strong>The action Attribute</strong>
+                <p>Defines the URL or file path destination where the form data will be sent for processing upon submission.</p>
+            </div>
+
+            <div class="learned-note">
+                <strong>Where GET Sends Form Data</strong>
+                <p>Appends form data directly onto the end of the destination URL as key-value query parameters (e.g., <code>page.php?name=value</code>).</p>
+            </div>
+
+            <div class="learned-note">
+                <strong>Where POST Sends Form Data</strong>
+                <p>Includes form data hidden inside the body of the HTTP request, keeping it separate from the URL.</p>
+            </div>
+
+            <div class="learned-note">
+                <strong>GET Data in the Browser URL</strong>
+                <p>Remains visible to the user as plaintext query parameters, allowing the page to be bookmarked, shared, or stored in browser history.</p>
+            </div>
+
+            <div class="learned-note">
+                <strong>POST and the URL</strong>
+                <p>No. POST does not show submitted values in the URL; the values remain tucked away inside the request body.</p>
+            </div>
+
+            <div class="learned-note">
+                <strong>The name Attribute</strong>
+                <p>Acts as the key identifier for an input field so the server script can access its corresponding value in <code>$_GET</code> or <code>$_POST</code>.</p>
+            </div>
+
+            <div class="learned-note">
+                <strong>Why isset() Is Useful</strong>
+                <p>Checks whether a specific form key exists in <code>$_GET</code> or <code>$_POST</code> and isn't null before processing, preventing PHP "Undefined index" notices when a page loads prior to form submission.</p>
+            </div>
+
+            <div class="learned-note">
+                <strong>Difference Between name and value</strong>
+                <div class="sub-item">
+                    <p><strong>name:</strong> The label/key assigned to the input field so the server knows which piece of data is being sent.</p>
+                    <p><strong>value:</strong> The actual content or user input contained within that field.</p>
+                </div>
+            </div>
+
+            <div class="learned-note">
+                <strong>When to Use GET Instead of POST</strong>
+                <p>Ideal for search bars, filters, or pagination where the request only retrieves data without causing side effects on the server, allowing users to bookmark or share specific result links easily.</p>
+            </div>
+        </section>
+
+        <nav class="lesson-navigation" aria-label="Lesson navigation">
+            <a href="../02-arithmetic/index.php">&larr; Previous: Arithmetic</a>
+            <a href="../../index.php">All lessons &rarr;</a>
+        </nav>
     </main>
+
+    <footer>
+        <p>PHP Learning Journey — Ivan Lee Dorillo</p>
+        <p>Learn. Practice. Build.</p>
+    </footer>
 </body>
 </html>

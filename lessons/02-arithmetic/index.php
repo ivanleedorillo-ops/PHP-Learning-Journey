@@ -353,7 +353,7 @@ $total = $price + $tax; // 12
         </section>
         <nav class="lesson-navigation" aria-label="Lesson navigation">
             <a href="../../index.php">&larr; All lessons</a>
-            <a href="../03-strings-and-concatenation/index.php">Next: $_GET and $_POST &rarr;</a>
+            <a href="../03-get-and-post/index.php">Next: $_GET and $_POST &rarr;</a>
         </nav>
     </main>
     <footer>
